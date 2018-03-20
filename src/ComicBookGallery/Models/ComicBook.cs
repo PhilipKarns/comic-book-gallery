@@ -18,9 +18,9 @@ namespace ComicBookGallery.Models
         public int IssueNumber { get; set; }
 
         //comic book's description
-        public int DescriptionHtml { get; set; }
+        public string DescriptionHtml { get; set; }
 
-        //string array that lists the artist who created the comic book
+        //object array that lists the artist who created the comic book
         public Artist[] Artists { get; set; }
 
         //indicates whether this comic book is a favorite of ours or not
