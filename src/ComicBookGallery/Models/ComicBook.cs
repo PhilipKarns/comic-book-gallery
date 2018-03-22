@@ -9,7 +9,7 @@ namespace ComicBookGallery.Models
     {
 
         //will be used to uniquely identify a comic book
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         //the title of the series this comic book is part of
         public string SeriesTitle { get; set; }
