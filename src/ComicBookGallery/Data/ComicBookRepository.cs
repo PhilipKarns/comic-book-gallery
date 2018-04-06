@@ -59,6 +59,13 @@ namespace ComicBookGallery.Data
             }
         };
 
+        //return an array of ComicBook objects to the GetComicBook method
+        public ComicBook[] GetComicBook()
+        {
+            //return these comic book objects to the array
+            return _comicBooks;
+        }
+
         public ComicBook GetComicBook(int id)        {
             ComicBook comicBookToReturn = null;
 
