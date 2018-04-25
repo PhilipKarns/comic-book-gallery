@@ -1,6 +1,7 @@
 ﻿@model ComicBookGallery.Models.ComicBook
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    @*initially we had the following line of code here "Layout = "~/Views/Shared/_Layout.cshtml";", but it was removed because the Layout is now being rendered to every view page via
+        the _ViewStart.cshtml file in the Views folder, so we don't have to add the layout to each page separately.*@
     ViewBag.Title = Model.DisplayText;
 }
 

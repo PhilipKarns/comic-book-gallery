@@ -1,7 +1,25 @@
 ﻿
+@*to make the view strongly typed, add the entire model reference to the view, including the array brackets so the view knows it's expecting a model. This aligns with the type of data the controller
+    is passing to the view.*@
+@*we get the Layout view from the _ViewStart.cshtml file in our Views folder. See that folder for more info about how the layout is applied to a view page*@
+@model ComicBookGallery.Models.ComicBook[]
+      
 @{
-    ViewBag.Title = "Index";
+        ViewBag.Title = "Comic Books";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
+<div class="row">
+    @*loop through each comic book in the ComicBook repository*@
+    @foreach (var comicBook in Model)
+    {
+        <div class="col-md-3">
+            <h4>@comicBook.DisplayText</h4>
+            <img src="/Images/@comicBook.CoverImageFileName"
+                 alt="@comicBook.DisplayText"
+                 class="img-responsive" />
+        </div>
+    }
+
+</div>
